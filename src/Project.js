@@ -22,4 +22,8 @@ export default class Project{
     removeCompletedTodos(){
         this.todoArray = this.todoArray.filter(todo => !todo.completed);
     }
+
+    deleteTodo(todoToRemove){
+        this.todoArray.splice(todoToRemove, 1);
+    }
 }
