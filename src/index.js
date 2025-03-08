@@ -1,13 +1,16 @@
+import "./styles.css";
 import Project from './Project.js';
+import ProjectUI from './ProjectUI.js';
 
 window.Project = Project;
+window.ProjectUI = ProjectUI;
 
-// let project = new Project('Title', 'Description', 'january' );
+ //let projectTest = new Project('Title', 'Description', 'january' );
 
-// project.createTodo('1', '2', '3');
+ //projectTest.createTodo('1', '2', '3');
 
 // project.createTodo('4', '5', '6');
 
-// project.printTodos();
+//projectTest.printTodos();
 
 
