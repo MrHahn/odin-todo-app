@@ -16,6 +16,5 @@ export default class ProjectUI{
 
             container.appendChild(todoWrapper);
         })
-
     }
 }

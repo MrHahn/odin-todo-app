@@ -71,3 +71,13 @@ header {
     height: 300px;
     width: 300px;
 }
+
+button.new-todo {
+  background: red;
+  height: 100px;
+  width: 100px;
+  border-radius: 127px;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+}
