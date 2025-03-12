@@ -19,6 +19,7 @@ ProjectUI.displayTodos(projectManager.projects[0].todoArray);
 
 newTodo.addEventListener('click', () => {
     ModalUI.showModal();
+    TodoUI.populateProjectSelect();
 })
 
 close.addEventListener('click', () => {
