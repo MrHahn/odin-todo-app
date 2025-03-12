@@ -1,11 +1,11 @@
 import Todo from './Todo.js';
 
 export default class Project{
-    constructor(title, description, dueDate, priority = 10){
+    constructor(title){
         this.title = title;
-        this.description = description;
-        this.dueDate = dueDate;
-        this.priority = priority;
+        // this.description = description;
+        // this.dueDate = dueDate;
+        // this.priority = priority;
         this.todoArray = [];
     }
 
