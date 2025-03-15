@@ -97,7 +97,8 @@ dialog {
   position: relative;
 } */
 
-dialog#addTodos .close {
+dialog#addTodos .close,
+dialog#addProjects .close {
   max-width: 25px;
   position: absolute;
   top: 5px;
