@@ -1,4 +1,6 @@
+import projectManager from './ProjectManager.js';
 import Project from './Project.js';
+import Nav from './Nav.js';
 
 export default class ProjectUI{
     static displayTodos(todoArr){
@@ -16,5 +18,13 @@ export default class ProjectUI{
 
             container.appendChild(todoWrapper);
         })
+    }
+    static submitNewProject(){
+        const form = document.querySelector('form.addProject');
+        const formData = new FormData(form);
+        const title = formData.get('projectTitle');
+        console.log(title);
+        projectManager.addProject(title);
+        Nav.populateNav();
     }
 }

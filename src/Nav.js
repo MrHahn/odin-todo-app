@@ -3,6 +3,7 @@ import projectManager from "./ProjectManager";
 export default class Nav{
     static populateNav(){
         const navWrapper = document.querySelector('header nav');
+        navWrapper.innerHTML = '';
         const list = document.createElement('ul');
         let projectList = projectManager.getProjects();
         projectList.forEach((item, index) => {
@@ -12,9 +13,5 @@ export default class Nav{
             list.appendChild(listItem);
         })
         navWrapper.appendChild(list);
-    }
-
-    static submitNewProject(){
-        
     }
 }
