@@ -12,6 +12,7 @@ class ProjectManager{
     }
 
     getProjects(){
+        console.log(this.projects);
         return this.projects;
     }
 }

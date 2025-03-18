@@ -10,6 +10,7 @@ export default class TodoUI{
         const dueDate = formData.get('dueDate');
         const priority = formData.get('priority');
         const project = formData.get('projects');
+        console.log(project);
         projectManager.projects[project].createTodo(title, desc, dueDate);
         ProjectUI.displayTodos(projectManager.projects[project].todoArray);
     }
@@ -18,9 +19,10 @@ export default class TodoUI{
         const form = document.querySelector('.addTodo');
         const selectField = form.querySelector('#projects');
         const projectArr = projectManager.getProjects();
+        let index = 0
+        selectField.innerHTML = '';
         projectArr.forEach(element => {
             let title = element.title;
-            let index = 0
             let option = document.createElement('option');
             option.value = index;
             option.textContent = title;

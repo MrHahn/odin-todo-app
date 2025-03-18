@@ -1,4 +1,6 @@
 import projectManager from "./ProjectManager";
+import Project from "./Project";
+import ProjectUI from "./ProjectUI";
 
 export default class Nav{
     static populateNav(){
@@ -10,6 +12,9 @@ export default class Nav{
             let listItem = document.createElement('li');
             listItem.textContent = item.title;
             listItem.setAttribute('index', index);
+            listItem.addEventListener('click', () => {
+                ProjectUI.displayTodos(projectManager.projects[index].todoArray)
+            })
             list.appendChild(listItem);
         })
         navWrapper.appendChild(list);
