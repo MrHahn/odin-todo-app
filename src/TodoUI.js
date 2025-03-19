@@ -10,9 +10,8 @@ export default class TodoUI{
         const dueDate = formData.get('dueDate');
         const priority = formData.get('priority');
         const project = formData.get('projects');
-        console.log(project);
         projectManager.projects[project].createTodo(title, desc, dueDate);
-        ProjectUI.displayTodos(projectManager.projects[project].todoArray);
+        ProjectUI.displayTodos(projectManager.projects[project]);
     }
 
     static populateProjectSelect(){

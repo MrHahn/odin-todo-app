@@ -13,7 +13,7 @@ export default class Nav{
             listItem.textContent = item.title;
             listItem.setAttribute('index', index);
             listItem.addEventListener('click', () => {
-                ProjectUI.displayTodos(projectManager.projects[index].todoArray)
+                ProjectUI.displayTodos(projectManager.projects[index])
             })
             list.appendChild(listItem);
         })

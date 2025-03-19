@@ -13,7 +13,7 @@ const newProject = document.querySelector('.new-project');
 const closeProjectModal = document.querySelector('#addProjects .close');
 const newProjectSubmit = document.querySelector('form.addProject');
 
-ProjectUI.displayTodos(projectManager.projects[0].todoArray);
+ProjectUI.displayTodos(projectManager.projects[0]);
 
 Nav.populateNav();
 

@@ -3,6 +3,7 @@ import Project from './Project.js';
 class ProjectManager{
     constructor(){
         this.projects = [];
+        this.currentProjectIndex = this.projects.length - 1; 
     }
 
     addProject(title){
@@ -12,8 +13,11 @@ class ProjectManager{
     }
 
     getProjects(){
-        console.log(this.projects);
         return this.projects;
+    }
+
+    getCurrentProject() {
+        return this.projects[this.currentProjectIndex] || null;
     }
 }
 
