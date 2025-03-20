@@ -19,6 +19,10 @@ class ProjectManager{
     getCurrentProject() {
         return this.projects[this.currentProjectIndex] || null;
     }
+
+    deleteProject(projectToRemove){
+        this.projects.splice(projectToRemove, 1);
+    }
 }
 
 const projectManager = new ProjectManager();

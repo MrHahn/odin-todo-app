@@ -4,6 +4,7 @@ import ProjectUI from "./ProjectUI";
 
 export default class Nav{
     static populateNav(){
+        const container = document.querySelector('#todo-container');
         const navWrapper = document.querySelector('header nav');
         navWrapper.innerHTML = '';
         const list = document.createElement('ul');
@@ -14,8 +15,10 @@ export default class Nav{
             listItem.setAttribute('index', index);
             listItem.addEventListener('click', () => {
                 ProjectUI.displayTodos(projectManager.projects[index])
+                container.setAttribute('project-index', index);
             })
             list.appendChild(listItem);
+
         })
         navWrapper.appendChild(list);
     }

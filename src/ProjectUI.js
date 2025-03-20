@@ -4,9 +4,12 @@ import Nav from './Nav.js';
 
 export default class ProjectUI{
     static displayTodos(project){
-        const container = document.querySelector('.todo-container');
+        const container = document.querySelector('#todo-container');
+        let projectIndex = project.index;
+        console.log(projectIndex);
         let todoArr = project.todoArray;
         container.innerHTML = '';
+        
         todoArr.forEach((item, index) => {
             const todoWrapper = document.createElement('div');
             const todoTitle = document.createElement('h1');

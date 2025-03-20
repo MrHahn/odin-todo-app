@@ -59,14 +59,14 @@ header {
     height: 100vh;
 }
 
-.todo-container {
+#todo-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 18px;
     padding: 15px;
 }
 
-.todo-container * {
+#todo-container * {
     background: red;
     height: 150px;
     width: 300px;
