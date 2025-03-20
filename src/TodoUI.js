@@ -3,6 +3,7 @@ import ProjectUI from './ProjectUI.js';
 
 export default class TodoUI{
     static submitNewTodo(){
+        const container = document.querySelector('#todo-container');
         const form = document.querySelector('form.addTodo')
         const formData = new FormData(form);
         const title = formData.get('title');
@@ -11,6 +12,7 @@ export default class TodoUI{
         const priority = formData.get('priority');
         const project = formData.get('projects');
         projectManager.projects[project].createTodo(title, desc, dueDate);
+        container.setAttribute('project-index', project);
         ProjectUI.displayTodos(projectManager.projects[project]);
     }
 

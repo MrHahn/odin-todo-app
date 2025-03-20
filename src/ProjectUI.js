@@ -34,11 +34,14 @@ export default class ProjectUI{
         })
     }
     static submitNewProject(){
+        const container = document.querySelector('#todo-container');
         const form = document.querySelector('form.addProject');
         const formData = new FormData(form);
         const title = formData.get('projectTitle');
-        console.log(title);
+        let newIndex;
         projectManager.addProject(title);
+        newIndex = projectManager.projects.length - 1;
+        container.setAttribute('project-index', newIndex);
         Nav.populateNav();
     }
 }
