@@ -48,5 +48,10 @@ removeProjectBtn.addEventListener('click', () => {
     let currentProjectIndex = container.getAttribute('project-index');
     projectManager.deleteProject(currentProjectIndex);
     Nav.populateNav();
-    ProjectUI.displayTodos(projectManager.projects[0]);
+    if(projectManager.projects.length === 0){
+        console.log('no projects');
+    }else{
+        ProjectUI.displayTodos(projectManager.projects[0]);
+    }
+    
 })
