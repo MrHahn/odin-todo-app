@@ -15,6 +15,7 @@ const newProjectSubmit = document.querySelector('form.addProject');
 const removeProjectBtn = document.querySelector('.removeProject');
 const container = document.querySelector('#todo-container');
 
+
 ProjectUI.displayTodos(projectManager.projects[0]);
 
 Nav.populateNav();
@@ -49,7 +50,7 @@ removeProjectBtn.addEventListener('click', () => {
     projectManager.deleteProject(currentProjectIndex);
     Nav.populateNav();
     if(projectManager.projects.length === 0){
-        console.log('no projects');
+        alert('No projects to remove');
     }else{
         ProjectUI.displayTodos(projectManager.projects[0]);
     }
