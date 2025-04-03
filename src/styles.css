@@ -132,3 +132,10 @@ dialog#addProjects .close {
   right: 10px;
   width: 30px;
 }
+
+.todo.expanded button {
+  display: inline-block;
+}
+.todo button {
+  display: none;
+}

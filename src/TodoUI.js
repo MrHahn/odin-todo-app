@@ -31,4 +31,15 @@ export default class TodoUI{
             index ++;
         });
     }
+
+    static openTodoInterface(element, close){
+        let todoClone = element.cloneNode(true);
+        todoClone.classList.add('expanded');
+        todoClone.appendChild(close);
+        element.appendChild(todoClone);
+        close.addEventListener('click', (event) => {
+            event.stopPropagation();
+            todoClone.remove();
+        })
+    }
 }
