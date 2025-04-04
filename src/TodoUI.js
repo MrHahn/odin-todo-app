@@ -32,14 +32,30 @@ export default class TodoUI{
         });
     }
 
-    static openTodoInterface(element, close){
+    static openTodoInterface(element, close, index, project){
         let todoClone = element.cloneNode(true);
         todoClone.classList.add('expanded');
         todoClone.appendChild(close);
+        let removeBtn = this.generateDeleteBtn(todoClone);
         element.appendChild(todoClone);
         close.addEventListener('click', (event) => {
             event.stopPropagation();
             todoClone.remove();
         })
+
+        removeBtn.addEventListener('click', () => {
+            ProjectUI.removeTodoElement(index, project);
+        })
+
+        
+    }
+
+    static generateDeleteBtn(element){
+        const removeBtn = document.createElement('button');
+        removeBtn.classList.add('remove-btn');
+        removeBtn.textContent = "Delete";
+        element.appendChild(removeBtn);
+        return removeBtn;
+
     }
 }

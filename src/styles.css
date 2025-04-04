@@ -136,6 +136,6 @@ dialog#addProjects .close {
 .todo.expanded button {
   display: inline-block;
 }
-.todo button {
+/* .todo button {
   display: none;
-}
+} */
