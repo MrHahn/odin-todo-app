@@ -1,17 +1,15 @@
 export default class Todo{
-    constructor(title, description, dueDate, completed = false, priority = 10){
+    constructor(title, description, dueDate, completed = false){
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
-        this.priority = priority;
         this.completed = completed;
     }
 
-    editTodo({title, desc, dueDate, priority}){
+    editTodo({title, desc, dueDate}){
         if (title !== undefined){ this.title = title };
         if (desc !== undefined) { this.description = desc};
         if (dueDate !== undefined) { this.dueDate = dueDate};
-        if (priority !== undefined) { this.priority = priority};
     }
 
     printTodo(){

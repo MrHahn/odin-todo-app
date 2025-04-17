@@ -14,6 +14,7 @@ const closeProjectModal = document.querySelector('#addProjects .close');
 const newProjectSubmit = document.querySelector('form.addProject');
 const removeProjectBtn = document.querySelector('.removeProject');
 const container = document.querySelector('#todo-container');
+const closeEditModal = document.querySelector('#editTodos .close');
 
 
 ProjectUI.displayTodos(projectManager.projects[0]);
@@ -37,8 +38,12 @@ newProject.addEventListener('click', () => {
     ModalUI.showProjectModal();
 })
 
-closeProjectModal .addEventListener('click', () => {
+closeProjectModal.addEventListener('click', () => {
     ModalUI.closeProjectModal();
+})
+
+closeEditModal.addEventListener('click', () => {
+    ModalUI.closeEditModal();
 })
 
 newProjectSubmit.addEventListener('submit', () => {

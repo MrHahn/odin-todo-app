@@ -18,4 +18,14 @@ export default class ModalUI{
         const newProjectBox = document.querySelector('#addProjects');
         newProjectBox.close();
     }
+
+    static showEditModal(){
+        const editTodoBox = document.querySelector('#editTodos');
+        editTodoBox.showModal();
+    }
+
+    static closeEditModal(){
+        const editTodoBox = document.querySelector('#editTodos');
+        editTodoBox.close();
+    }
 }
