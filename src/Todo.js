@@ -24,4 +24,8 @@ export default class Todo{
     markComplete(){
         this.completed = true;
     }
+
+    static from(obj){
+        return new Todo(obj.title, obj.description, obj.dueDate, obj.completed);
+    }
 };

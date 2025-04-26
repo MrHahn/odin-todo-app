@@ -1,4 +1,4 @@
-import projectManager from './ProjectManager.js';
+import {projectManager} from './ProjectManager.js';
 import ProjectUI from './ProjectUI.js';
 import ModalUI from './ModalUI.js';
 import Project from './Project.js';
@@ -13,6 +13,7 @@ export default class TodoUI{
         const dueDate = formData.get('dueDate');
         const project = formData.get('projects');
         projectManager.projects[project].createTodo(title, desc, dueDate);
+        projectManager.saveProjectsToStorage();
         container.setAttribute('project-index', project);
         ProjectUI.displayTodos(projectManager.projects[project]);
     }
