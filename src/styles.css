@@ -47,20 +47,54 @@
   }
 
 
+:root{
+  --rich-black: #171a21ff;
+  --paynes-gray: #617073ff;
+  --turquoise: #00ccb4ff;
+  --jordy-blue: #92bceaff;
+}
+
 body {
     display: grid;
     grid-template-columns: 300px 1fr;
 }
 
+body *{
+  font-family: "Montserrat", sans-serif;;
+}
+
 main{
   position: relative;
+  background:var(--paynes-gray);
 }
 
 header {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    background: red;
-    height: 100vh;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background: var(--rich-black);
+  height: 100vh;
+  padding: 30px 10px 0 30px;
+  font-size: 23px;
+}
+
+nav {
+  margin-bottom: 15px;
+}
+
+
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--turquoise);
+}
+
+button{
+  background-color:var(--turquoise);
+  color: var(--rich-black);
+  border: none;
+  border-radius: 5px;
 }
 
 #todo-container {
@@ -71,7 +105,7 @@ header {
 }
 
 #todo-container .todo {
-    background: red;
+    background:var(--jordy-blue);
     height: 150px;
     width: 300px;
     display: flex;
@@ -79,6 +113,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+    border-radius: 5px;
 }
 
 button.new-todo {
@@ -107,7 +142,8 @@ dialog {
 } */
 
 dialog#addTodos .close,
-dialog#addProjects .close {
+dialog#addProjects .close,
+dialog#editTodos .close {
   max-width: 25px;
   position: absolute;
   top: 5px;

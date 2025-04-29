@@ -1,12 +1,9 @@
 import "./styles.css";
-import Project from './Project.js';
 import ProjectUI from './ProjectUI.js';
 import ModalUI from './ModalUI.js';
 import TodoUI from './TodoUI.js';
-import ProjectManager from "./ProjectManager.js";
 import { projectManager } from "./ProjectManager.js";
 import Nav from './Nav.js';
-import Todo from "./Todo.js";
 
 const newTodo = document.querySelector('.new-todo');
 const closeTodoModal = document.querySelector('#addTodos .close');
@@ -24,14 +21,6 @@ if(localStorage.getItem('projects')){
 }else{
     projectManager.addProject('Default Project');
 }
-
-
-
-// if(localStorage.getItem('todoArray')){
-//     projectManager.getProjects().forEach((item) => {
-//         item.loadTodosFromStorage();
-//     })
-// }
 
 ProjectUI.displayTodos(projectManager.projects[0]);
 

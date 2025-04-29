@@ -1,5 +1,4 @@
 import {projectManager} from "./ProjectManager";
-import Project from "./Project";
 import ProjectUI from "./ProjectUI";
 
 export default class Nav{

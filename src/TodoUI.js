@@ -1,7 +1,6 @@
 import {projectManager} from './ProjectManager.js';
 import ProjectUI from './ProjectUI.js';
 import ModalUI from './ModalUI.js';
-import Project from './Project.js';
 
 export default class TodoUI{
     static submitNewTodo(){
@@ -16,6 +15,7 @@ export default class TodoUI{
         projectManager.saveProjectsToStorage();
         container.setAttribute('project-index', project);
         ProjectUI.displayTodos(projectManager.projects[project]);
+        form.reset();
     }
 
     static editTodoContent(todo, project){
@@ -26,6 +26,7 @@ export default class TodoUI{
         const dueDate = formData.get('newDueDate');
         project.todoArray[todo].editTodo({title, desc, dueDate});
         ProjectUI.displayTodos(project);
+        form.reset();
     }
 
     static populateProjectSelect(){

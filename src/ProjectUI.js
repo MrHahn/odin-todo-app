@@ -1,5 +1,4 @@
 import {projectManager} from './ProjectManager.js';
-import Project from './Project.js';
 import Nav from './Nav.js';
 import TodoUI from './TodoUI.js';
 
@@ -44,7 +43,8 @@ export default class ProjectUI{
         newIndex = projectManager.projects.length - 1;
         container.setAttribute('project-index', newIndex);
         Nav.populateNav();
-        console.log(projectManager.getCurrentProject());
+        form.reset();
+
     }
 
     static removeTodoElement(index, project){
