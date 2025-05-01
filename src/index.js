@@ -25,6 +25,7 @@ if(localStorage.getItem('projects')){
 ProjectUI.displayTodos(projectManager.projects[0]);
 
 Nav.populateNav();
+Nav.activeProjectHighight();
 
 newTodo.addEventListener('click', () => {
     ModalUI.showTodoModal();
@@ -63,6 +64,7 @@ removeProjectBtn.addEventListener('click', () => {
         alert('No projects to remove');
     }else{
         ProjectUI.displayTodos(projectManager.projects[0]);
+        projectManager.saveProjectsToStorage();
     }
     
 })

@@ -65,7 +65,6 @@ body *{
 
 main{
   position: relative;
-  background:var(--paynes-gray);
 }
 
 header {
@@ -90,34 +89,49 @@ header nav ul {
   color: var(--turquoise);
 }
 
+nav li {
+  padding: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+nav ul li.active {
+  background: var(--paynes-gray);
+}
+
 button{
   background-color:var(--turquoise);
   color: var(--rich-black);
-  border: none;
+  border: 2px solid var(--rich-black);
   border-radius: 5px;
+}
+
+button:hover{
+  background-color: var(--paynes-gray);
+  color: white;
 }
 
 #todo-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 18px;
     padding: 15px;
+    min-height: 95%;
 }
 
 #todo-container .todo {
     background:var(--jordy-blue);
-    height: 150px;
-    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
     border-radius: 5px;
+    height: 350px;
 }
 
 button.new-todo {
-  background: red;
+  background: var(--turquoise);
   height: 100px;
   width: 100px;
   border-radius: 127px;
@@ -159,6 +173,7 @@ dialog#editTodos .close {
   transform: translate(-50%, -50%);
   min-width: 500px;
   min-height: 500px;
+  border: 6px solid var(--rich-black);
 }
 
 .todo .close svg {
@@ -171,7 +186,12 @@ dialog#editTodos .close {
 
 .todo.expanded button {
   display: inline-block;
+  margin: 0 10px;
+  font-size: 22px;
+  padding: 5px 20px;
 }
-/* .todo button {
-  display: none;
-} */
+
+button.removeProject {
+  margin: 10px 13px;
+  font-size: 20px;
+}

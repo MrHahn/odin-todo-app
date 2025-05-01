@@ -47,10 +47,13 @@ export default class TodoUI{
 
     static openTodoInterface(element, close, index, project){
         let todoClone = element.cloneNode(true);
+        let buttonWrap = document.createElement('div');
+        buttonWrap.classList.add('button-wrapper');
         todoClone.classList.add('expanded');
         todoClone.appendChild(close);
-        let removeBtn = this.generateDeleteBtn(todoClone);
-        let editBtn = this.generateEditBtn(todoClone);
+        todoClone.appendChild(buttonWrap);
+        let removeBtn = this.generateDeleteBtn(buttonWrap);
+        let editBtn = this.generateEditBtn(buttonWrap);
         element.appendChild(todoClone);
         close.addEventListener('click', (event) => {
             event.stopPropagation();

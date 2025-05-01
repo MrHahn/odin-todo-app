@@ -21,4 +21,18 @@ export default class Nav{
         })
         navWrapper.appendChild(list);
     }
+
+    static activeProjectHighight(){
+        const firstNavItem = document.querySelector('header nav ul li');
+        const navItems = document.querySelectorAll('header nav ul li');
+        firstNavItem.classList.add('active');
+        navItems.forEach((item) => {
+            item.addEventListener('click', function(){
+                navItems.forEach((item => {
+                    item.classList.remove('active');
+                }))
+                this.classList.add('active');
+            });
+        })
+    }
 }

@@ -49,7 +49,7 @@ export default class ProjectUI{
 
     static removeTodoElement(index, project){
         project.deleteTodo(index);
-        localStorage.setItem('todoArray', JSON.stringify(project.todoArray));
+        projectManager.saveProjectsToStorage();
         this.displayTodos(project);
     }
 }
