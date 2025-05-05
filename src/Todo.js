@@ -7,9 +7,9 @@ export default class Todo{
     }
 
     editTodo({title, desc, dueDate}){
-        if (title !== undefined){ this.title = title };
-        if (desc !== undefined) { this.description = desc};
-        if (dueDate !== undefined) { this.dueDate = dueDate};
+        if (title){ this.title = title };
+        if (desc) { this.description = desc};
+        if (dueDate) { this.dueDate = dueDate};
     }
 
     printTodo(){

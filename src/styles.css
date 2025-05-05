@@ -99,14 +99,14 @@ nav ul li.active {
   background: var(--paynes-gray);
 }
 
-button{
+button, input[type=submit]{
   background-color:var(--turquoise);
   color: var(--rich-black);
   border: 2px solid var(--rich-black);
   border-radius: 5px;
 }
 
-button:hover{
+button:hover, input[type=submit]:hover{
   background-color: var(--paynes-gray);
   color: white;
 }
@@ -123,7 +123,7 @@ button:hover{
     background:var(--jordy-blue);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 15px;
     border-radius: 5px;
@@ -145,15 +145,25 @@ dialog {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
+  background: var(--paynes-gray);
   border: none;
   border-radius: 7px;
   box-shadow: 4px 4px 10px #000000a3;
 }
 
-/* dialog#addTodos {
-  position: relative;
-} */
+dialog input, dialog select {
+  margin: 11px 12px;
+  padding: 5px;
+  width: 100%;
+  max-width: 230px;
+  border-radius: 6px;
+  border: none;
+}
+
+dialog label {
+  display: block;
+  color: white;
+}
 
 dialog#addTodos .close,
 dialog#addProjects .close,
@@ -174,6 +184,7 @@ dialog#editTodos .close {
   min-width: 500px;
   min-height: 500px;
   border: 6px solid var(--rich-black);
+  box-shadow: 4px 4px 10px #000000a3;
 }
 
 .todo .close svg {

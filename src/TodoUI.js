@@ -70,13 +70,13 @@ export default class TodoUI{
         editBtn.addEventListener('click', (event) => {
             event.stopPropagation(); 
             console.log('edit clicked');
-            let todoIndex = event.currentTarget.parentElement.dataset.index;
+            let todoIndex = event.currentTarget.parentElement.parentElement.dataset.index;
             ModalUI.showEditModal();
             const submitEditModal = document.querySelector('form.editTodo');
             submitEditModal.setAttribute('data-index', todoIndex);
-            
             submitEditModal.addEventListener('submit', (event) => {
                 todoIndex = submitEditModal.dataset.index;
+                console.log(todoIndex);
                 console.log('submit clicked');
                 event.stopImmediatePropagation();
                 this.editTodoContent(todoIndex, project);
