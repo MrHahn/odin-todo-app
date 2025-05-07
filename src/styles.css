@@ -104,6 +104,7 @@ button, input[type=submit]{
   color: var(--rich-black);
   border: 2px solid var(--rich-black);
   border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover, input[type=submit]:hover{
@@ -128,6 +129,7 @@ button:hover, input[type=submit]:hover{
     padding: 15px;
     border-radius: 5px;
     height: 350px;
+    cursor: pointer;
 }
 
 button.new-todo {
@@ -174,9 +176,10 @@ dialog#editTodos .close {
   right: 5px;
   height: 25px;
   width: 25px;
+  cursor: pointer;
 }
 
-.todo.expanded {
+#todo-container .todo.expanded {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -185,7 +188,10 @@ dialog#editTodos .close {
   min-height: 500px;
   border: 6px solid var(--rich-black);
   box-shadow: 4px 4px 10px #000000a3;
+  justify-content: space-around;
+  cursor: default;
 }
+
 
 .todo .close svg {
   color: black;
@@ -202,7 +208,25 @@ dialog#editTodos .close {
   padding: 5px 20px;
 }
 
+.todo span.due-date {
+  font-weight: 500;
+}
+
+.todo .todo-description {
+  flex-grow: 2;
+}
+
 button.removeProject {
   margin: 10px 13px;
   font-size: 20px;
+}
+
+.todo.expanded .due-date {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+select, select option {
+  text-transform: capitalize;
 }

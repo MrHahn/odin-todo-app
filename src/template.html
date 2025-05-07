@@ -39,7 +39,7 @@
             <form class="addTodo" method="dialog">
                 <div class="form-group">
                     <label for="title">Todo Title</label>
-                    <input id="title" name="title" type="text">
+                    <input id="title" required name="title" type="text">
                 </div>
                 <div class="form-group">
                     <label for="description">Todo Description</label>
@@ -47,12 +47,8 @@
                 </div>
                 <div class="form-group">
                     <label for="dueDate">Due Date</label>
-                    <input id="dueDate" name="dueDate" type="text">
+                    <input id="dueDate" required name="dueDate" type="date">
                 </div>
-                <!-- <div class="form-group">
-                    <label for="priority">Priority</label>
-                    <input id="priority" name="priority" type="number">
-                </div> -->
                 <div class="form-group">
                     <label for="projects">Select Project</label>
                     <select name="projects" id="projects">
@@ -71,7 +67,7 @@
             <form class="editTodo" method="dialog">
                 <div class="form-group">
                     <label for="newTitle">Todo Title</label>
-                    <input id="newTitle" name="newTitle" type="text">
+                    <input id="newTitle" required name="newTitle" type="text">
                 </div>
                 <div class="form-group">
                     <label for="newDescription">Todo Description</label>
@@ -79,7 +75,7 @@
                 </div>
                 <div class="form-group">
                     <label for="newDueDate">Due Date</label>
-                    <input id="newDueDate" name="newDueDate" type="text">
+                    <input id="newDueDate" required name="newDueDate" type="date">
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Submit">
