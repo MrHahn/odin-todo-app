@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script defer src="main.js"></script></head>
+<body>
+    <header>
+        <nav>
+            <ul>
+
+            </ul>
+        </nav>
+        <button class="new-project">New Project</button>
+        <dialog id="addProjects">
+            <div class="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close-circle</title><path d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" /></svg></div>
+            <form class="addProject" method="dialog">
+                <div class="form-group">
+                    <label for="projectTitle">Project Title</label>
+                    <input id="projectTitle" name="projectTitle" type="text">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </dialog>
+    </header>
+    <main>
+        <div project-index="0" id="todo-container">
+            
+        </div>
+        <button class="new-todo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>plus-circle</title><path d="M17,13H13V17H11V13H7V11H11V7H13V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg></button>
+        <dialog id="addTodos">
+            <div class="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close-circle</title><path d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" /></svg></div>
+            <form class="addTodo" method="dialog">
+                <div class="form-group">
+                    <label for="title">Todo Title</label>
+                    <input id="title" required name="title" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="description">Todo Description</label>
+                    <textarea id="description" name="description" rows="4" cols="50"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="dueDate">Due Date</label>
+                    <input id="dueDate" required name="dueDate" type="date">
+                </div>
+                <div class="form-group">
+                    <label for="projects">Select Project</label>
+                    <select name="projects" id="projects">
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </dialog>
+        <button class="removeProject">Remove This Project</button>
+
+        <dialog id="editTodos">
+            <div class="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close-circle</title><path d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" /></svg></div>
+            <form class="editTodo" method="dialog">
+                <div class="form-group">
+                    <label for="newTitle">Todo Title</label>
+                    <input id="newTitle" name="newTitle" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="newDescription">Todo Description</label>
+                    <textarea id="newDescription" name="newDescription" rows="4" cols="50"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="newDueDate">Due Date</label>
+                    <input id="newDueDate" name="newDueDate" type="date">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </dialog>
+    </main>
+</body>
+</html>
