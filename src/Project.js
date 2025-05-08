@@ -3,9 +3,6 @@ import Todo from './Todo.js';
 export default class Project{
     constructor(title, todoArray = []){
         this.title = title;
-        // this.description = description;
-        // this.dueDate = dueDate;
-        // this.priority = priority;
         this.todoArray = todoArray;
     }
 

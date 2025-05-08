@@ -46,6 +46,22 @@
     isolation: isolate;
   }
 
+  ::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background: var(--jordy-blue); /* Set the background color of the scrollbar track */
+    border-radius: 6px; /* Optional: Add rounded corners to the track */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: var(--rich-black); /* Set the background color of the scrollbar thumb */
+  border-radius: 6px; /* Optional: Add rounded corners to the thumb */
+}
+
 
 :root{
   --rich-black: #171a21ff;
@@ -97,13 +113,14 @@ nav li {
 
 nav ul li.active {
   background: var(--paynes-gray);
+  border-radius: 7px;
 }
 
 button, input[type=submit]{
   background-color:var(--turquoise);
   color: var(--rich-black);
   border: 2px solid var(--rich-black);
-  border-radius: 5px;
+  border-radius: 7px;
   cursor: pointer;
 }
 
@@ -127,7 +144,7 @@ button:hover, input[type=submit]:hover{
     justify-content: flex-start;
     align-items: center;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     height: 350px;
     cursor: pointer;
 }
@@ -142,6 +159,31 @@ button.new-todo {
   bottom: 5px;
 }
 
+h1.todo-title {
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.todo.expanded h1.todo-title {
+  margin-top: 25px;
+  white-space: normal;
+}
+
+.todo-description {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.todo.expanded .todo-description{
+  overflow-y: scroll;
+  width: 100%;
+}
+
 dialog {
   position: absolute;
   top: 50%;
@@ -149,11 +191,11 @@ dialog {
   transform: translate(-50%, -50%);
   background: var(--paynes-gray);
   border: none;
-  border-radius: 7px;
+  border-radius: 10px;
   box-shadow: 4px 4px 10px #000000a3;
 }
 
-dialog input, dialog select {
+dialog input, dialog select, dialog textarea {
   margin: 11px 12px;
   padding: 5px;
   width: 100%;

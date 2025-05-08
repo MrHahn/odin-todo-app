@@ -19,7 +19,7 @@ const closeEditModal = document.querySelector('#editTodos .close');
 if(localStorage.getItem('projects')){
     projectManager.loadProjectsFromStorage();
 }else{
-    projectManager.addProject('Default Project');
+    projectManager.addProject('Misc. Todos');
 }
 
 ProjectUI.displayTodos(projectManager.projects[0]);

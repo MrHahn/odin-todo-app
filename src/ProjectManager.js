@@ -41,13 +41,3 @@ export default class ProjectManager{
 
 export const projectManager = new ProjectManager();
 
-// if(localStorage.getItem('projects')){
-//     projectManager.loadProjectsFromStorage();
-// }else{
-//     projectManager.addProject('Default Project');
-// }
-
-
-
-//export default projectManager;
-
